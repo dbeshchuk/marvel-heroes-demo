@@ -27,3 +27,14 @@ export function fetchHeroById(id : string) {
   return mainFetch(`${BASE_URL}public/characters/${id}?apikey=${API_KEY}`);
 }
 
+export function fetchHeroComics(id : string, offset: number) {
+  return mainFetch(`${BASE_URL}public/characters/${id}/comics?offset=${offset}&apikey=${API_KEY}`);
+}
+
+export function fetchHeroSeries(id : string, offset: number) {
+  return mainFetch(`${BASE_URL}public/characters/${id}/series?offset=${offset}&apikey=${API_KEY}`);
+}
+
+export function fetchHeroEvents(id : string, offset: number) {
+  return mainFetch(`${BASE_URL}public/characters/${id}/events?offset=${offset}&apikey=${API_KEY}`);
+}

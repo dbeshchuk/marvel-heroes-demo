@@ -1,0 +1,63 @@
+.container {
+  margin-top: 24px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 440px;
+
+  @media screen and (max-width: 480px) {
+    width: auto;
+  }
+
+  @media screen and (min-width: 940px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+  }
+}
+
+.image {
+  width: 350px;
+
+  @media screen and (max-width: 940px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.info {
+  width: 400px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 940px) {
+    width: auto;
+    margin: 10px;
+  }
+}
+
+.heroList {
+  margin-right: -30px;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.heroItem {
+  margin-top: 24px;
+  margin-right: 24px;
+
+  @media screen and (min-width: 480px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
+}

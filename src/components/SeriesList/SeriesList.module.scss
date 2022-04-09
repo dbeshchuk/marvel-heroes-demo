@@ -1,0 +1,9 @@
+.list {
+  margin-right: -30px;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
