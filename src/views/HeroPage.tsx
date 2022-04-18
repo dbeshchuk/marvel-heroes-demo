@@ -8,6 +8,7 @@ import { TabContext, TabList } from '@mui/lab';
 import ComicsList from "../components/ComicsList/ComicsList"
 import SeriesList from "../components/SeriesList/SeriesList"
 import EventsList from "../components/EventsList/EventsList"
+import Modal from "../components/Modal/Modal"
 
 import styles from "./HeroPage.module.scss"
 
@@ -41,6 +42,8 @@ const HeroPage = () => {
 
   return (
     <>
+      <Modal />
+      
       <Button
         type="button"
         href="/"
@@ -103,6 +106,8 @@ const HeroPage = () => {
           <EventsList />
         </div>
       </TabContext>
+
+      
     </>
   );
 };
