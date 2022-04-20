@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Box, Button, Typography} from '@mui/material';
+import { Box, Button, Typography, Modal} from '@mui/material';
 
 import styles from "./Modal.module.scss"
 
@@ -21,24 +21,29 @@ const TransitionModal = () => {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button
+        onClick={handleOpen}
+        sx={{marginTop: "10px"}}
+      >
+        Open modal
+      </Button>
 
-      {openModal && 
-        <div
-          className={
-            unmountStyle
-              ? styles.hiddenBackdrop
-              : styles.backdrop
-            }
-          onClick={handleClose}
-        >
-          <Box className={styles.modal}>
-            <Typography variant="h6" component="h2">
-              Text
-            </Typography>
-          </Box>
-        </div>
-      }
+      <Modal
+        open={openModal}
+        onClose={handleClose}
+        className={
+          unmountStyle
+            ? styles.hiddenBackdrop
+            : styles.backdrop
+          }
+      >
+        
+        <Box className={styles.modal}>
+          <Typography variant="h6" component="h2">
+            Text
+          </Typography>
+        </Box>
+      </Modal>
     </div>
   );
 }
